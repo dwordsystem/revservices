@@ -52,3 +52,4 @@ Services.RunServiceLoop = function(selection:string, callback)
 	end;
 end;
 
+return Services;
