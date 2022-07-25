@@ -11,11 +11,11 @@ Services.Functions.Get = function(path:Instance)
 	return game:GetService(path);
 end;
 
-Services.Functions.GetPlayers = function()
+Services.Functions.Functions.GetPlayers = function()
 	return game:GetService("Players"):GetPlayers();
 end;
 
-Services.Tween = function(item:Instance, options)
+Services.Functions.Tween = function(item:Instance, options)
 	if type(options) ~= "table" then
 		if typeof(item) ~= "Instance" then assert(typeof(item)=="table", "Wrong instance input!") end;
 		options.TweenInfo = TweenInfo.new(0.5);
@@ -27,13 +27,13 @@ Services.Tween = function(item:Instance, options)
 	end);
 end
 
-Services.EditProperty = function(path:Instance, property, value:any)
+Services.Functions.EditProperty = function(path:Instance, property, value:any)
 	coroutine.wrap(function()
 		path[property] = value;
 	end);
 end;
 
-Services.RunServiceLoop = function(selection:string, callback)
+Services.Functions.RunServiceLoop = function(selection:string, callback)
 	if type(selection) ~= "string" then 
 		selection = "BindToRenderStep";
 	end;
