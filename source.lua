@@ -12,7 +12,7 @@ Services.Functions.Get = function(path:Instance)
 	return game:GetService(path);
 end;
 
-Services.Functions.Functions.GetPlayers = function()
+Services.Functions.GetPlayers = function()
 	return game:GetService("Players"):GetPlayers();
 end;
 
