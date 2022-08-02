@@ -5,6 +5,7 @@ local Services = {
 	RunService = game:GetService("RunService");
 	ReplicatedStorage = game:GetService("ReplicatedStorage");
 	TweenService = game:GetService("TweenService");
+	UserInputService = game:GetService("UserInputService");
 };
 
 Services.Functions.Get = function(path:Instance)
